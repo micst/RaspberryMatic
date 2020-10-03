@@ -42,5 +42,13 @@ menu "Java Runtime Environment"
   source "$BR2_EXTERNAL_EQ3_PATH/package/java-azul/Config.in"
 endmenu
 
+menu "DotnetCore Runtime Environment"
+  source "$BR2_EXTERNAL_EQ3_PATH/package/dotnet-runtime/Config.in"
+endmenu
+
+menu "Home Assistant"
+  source "$BR2_EXTERNAL_EQ3_PATH/package/home-assistant/Config.in"
+endmenu
+
 # External packages
 source "$BR2_EXTERNAL_EQ3_PATH/Config.ext.in"

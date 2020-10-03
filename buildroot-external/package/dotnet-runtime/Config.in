@@ -1,0 +1,15 @@
+comment "dotnet-runtime needs a toolchain w/ glibc and threads"
+        depends on !BR2_TOOLCHAIN_USES_GLIBC
+
+config BR2_PACKAGE_DOTNET_RUNTIME
+    bool "dotnet-runtime"
+    depends on BR2_TOOLCHAIN_USES_GLIBC
+    depends on BR2_TOOLCHAIN_HAS_THREADS
+    depends on BR2_PACKAGE_LIBZLIB
+    depends on BR2_PACKAGE_OPENSSL
+    depends on BR2_PACKAGE_LIBCURL
+    depends on BR2_PACKAGE_ICU
+    help
+      .NET Core 3.1 Runtime (v3.1.7) - Linux ARM32 binaries
+
+      https://dotnet.microsoft.com/download/dotnet-core/3.1
